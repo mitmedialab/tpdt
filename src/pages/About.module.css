@@ -1,0 +1,226 @@
+/* src/pages/About.module.css */
+
+.aboutPage {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  /* subtle white→clear gradient over your universal bg */
+  background: none;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #333;
+  position: relative;
+}
+
+.logoContainer {
+  margin-top: 4rem;      
+  margin-bottom: 3rem;      
+  text-align: center;
+}
+
+/* Constrain size */
+.logoImage {
+  max-width: 40%;       
+  height: auto;
+  display: inline-block;
+}
+
+/* Header */
+.headerZone {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.headerPieces {
+  display: inline-flex;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.pieceMint, .pieceCoral {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+.pieceMint { background: #35d0ba; }
+.pieceCoral { background: #f84b74; }
+
+/* Sections */
+.sectionZone {
+  background: #fff;
+  border: 4px dashed #000;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.textBlock p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* GIF Area */
+.gifZone {
+  position: relative;
+  margin: 2rem 0;
+}
+.gifBox {
+  width: 100%;
+  height: 260px;
+  border: 3px dashed #ffcd3c;
+  border-radius: 6px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-style: italic;
+}
+.phaseBadge {
+  position: absolute;
+  background: #333;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  transform: rotate(-3deg);
+}
+
+/* “How it works” steps */
+.sectionTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.step {
+  background: #f9f9f9;
+  border-left: 8px solid;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.step[data-color="mint"] { border-color: #35d0ba; }
+.step[data-color="orange"] { border-color: #ff9234; }
+.step[data-color="coral"] { border-color: #f84b74; }
+.stepTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.stepText {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Buttons */
+.buttonsRow {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 3px solid #000;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+.button:hover {
+  transform: translateY(-2px);
+}
+.primary {
+  background: #35d0ba;
+  color: #fff;
+  border-color: #35d0ba;
+}
+.secondary {
+  background: #ffd6b2;
+  color: #333;
+  border-color: #ffd6b2;
+}
+
+/* Link */
+.link {
+  color: #35d0ba;
+  text-decoration: none;
+  font-weight: 700;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+.introContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 3rem;  /* push below fixed header */
+  margin-bottom: 2rem;
+}
+
+.sectionZone {
+  background: #fff;
+  border: 4px dashed #000;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.introContainer > .sectionZone {
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  text-align: center;       
+}
+
+.pageOverlay {
+  position: relative;    
+}
+
+.pageOverlay::before {
+content: "";
+  position: fixed;      
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.95) 0%,
+    rgba(255,255,255,0) 98%
+  );
+  pointer-events: none;  
+  z-index: -1;           
+}
+
+.pageOverlay > * {
+  position: relative;
+  z-index: 1;
+}
+
+.carouselImage {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border: 3px dashed #ffcd3c;
+  border-radius: 6px;
+}
+
+/* Photographer credit */
+.carouselCredit {
+  position: absolute;
+  bottom: 8px;
+  left: 2px;
+  background-color: #ffcd3c;  
+  color: #000;
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  z-index: 1;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}

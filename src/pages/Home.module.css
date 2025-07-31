@@ -1,0 +1,145 @@
+/* full-page subtle overlay on Home only */
+.pageOverlay {
+  position: relative;
+}
+.pageOverlay::before {
+  content: "";
+  position: fixed;
+  top:    0;
+  right:  0;
+  bottom: 0;
+  left:   0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.95) 0%,
+    rgba(245,245,245,0)     90%
+  );
+  pointer-events: none;
+  z-index:        -1;
+}
+.pageOverlay > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* unified fixed header */
+.fixedHeader {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(6px);
+  z-index: 1001;
+}
+.headerButton {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 0.2s ease, transform 0.2s ease, text-shadow 0.2s ease;
+}
+.headerButton:hover {
+  color: #35d0ba;
+  transform: scale(1.05);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* center content below header */
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* horizontal centering */
+  gap: 1.5rem;
+  padding-top: 7rem;         /* ↑ increase this to push content down */
+  text-align: center;
+}
+
+/* page title */
+.title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+/* deck buttons row */
+.deckGrid {
+  display: flex;
+  justify-content: center; /* center the row */
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* individual deck buttons */
+.deckButton {
+  min-width: 160px;
+  padding: 1rem 1.5rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 3px dashed #000;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.deckButton:hover {
+  background: #adf6ec;
+}
+.active {
+  background: #adf6ec;
+}
+
+/* start game button */
+.startButton {
+  padding: 1rem 2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 3px solid #000;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.startButton:disabled {
+  background: #fff;
+  color: #000;
+  border-color: #000;
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.startButton:not(:disabled):hover {
+  transform: translateY(-2px);
+}
+
+/* logo spacing if you keep it on Home */
+.logoContainer {
+  margin-top: 4rem;
+  text-align: center;
+}
+.logoImage {
+  max-width: 40%;
+  height: auto;
+  display: inline-block;
+}
+
+.logoContainer {
+  margin-top: 4rem;      
+  text-align: center;
+}
+
+/* Constrain size */
+.logoImage {
+  max-width: 40%;       
+  height: auto;
+  display: inline-block;
+}

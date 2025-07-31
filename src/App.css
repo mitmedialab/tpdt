@@ -1,0 +1,93 @@
+#root {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Universal Background */
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px; /* try 18px, 19px, or even 20px */
+  line-height: 1.3;
+}
+
+body::before {
+  content: "";
+  position: fixed;         /* cover the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('/images/universal-bg.jpg') center/cover no-repeat;
+  opacity: 0.3;            /* adjust for desired faintness */
+  pointer-events: none;    /* clicks pass through */
+  z-index: -1;             /* sit beneath #root and all app content */
+}
+
+/* unified fixed header */
+.fixedHeader {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(6px);
+  z-index: 1001;
+}
+.headerButton {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 0.2s ease, transform 0.2s ease, text-shadow 0.2s ease;
+}
+.headerButton:hover {
+  color: #35d0ba;
+  transform: scale(1.05);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+

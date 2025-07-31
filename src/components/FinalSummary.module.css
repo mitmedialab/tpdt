@@ -1,0 +1,100 @@
+.container {
+  padding: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.header {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.section {
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* default: flex-wrap with centred items */
+.cardRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center; /* centre cards */
+}
+
+/* override for exactly 3 columns */
+.threeCols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-items: center; /* centre each card in its cell */
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.button {
+  border: 3px solid black;
+  padding: 16px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #ffffff;
+  font-family: 'Josefin Sans', sans-serif;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* hide buttons during capture */
+.hideButtons .buttonRow {
+  display: none;
+}
+
+.rankText {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 16px;
+  margin-top: 8px;
+  font-size: 1.3rem;
+}
+
+.rankItem {
+  margin: 0 12px;
+  text-align: center;
+}
+
+.summaryPhase {
+  display: flex;
+  align-items: flex-start;    
+  margin-bottom: 2rem;        
+}
+
+.phaseIndicator {
+  position: static;           
+  flex-shrink: 0;         
+  width: 100px;               
+  margin-right: 1rem;  
+  margin-top: 52px;       
+  font-size: 1.2vw;          
+  font-weight: bold;
+  background: rgba(255,255,255,0.8);
+  padding: 0.5em 0.75em;
+  border: 2px solid black;
+}
+  
+.phaseSections {
+  flex: 1;                   
+}

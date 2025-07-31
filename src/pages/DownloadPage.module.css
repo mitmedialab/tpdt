@@ -1,0 +1,130 @@
+/* Full-screen gradient background (only on DownloadPage) */
+.pageOverlay {
+  position: relative;
+}
+.pageOverlay::before {
+  content: "";
+  position: fixed;
+  top:    0;
+  right:  0;
+  bottom: 0;
+  left:   0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.95) 0%,
+    rgba(255,255,255,0)     90%
+  );
+  pointer-events: none;
+  z-index:        -1;
+}
+.pageOverlay > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Unified fixed header */
+.fixedHeader {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(6px);
+  z-index: 1001;
+}
+.headerButton {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease, text-shadow 0.2s ease;
+}
+.headerButton:hover {
+  color: #35d0ba;
+  transform: scale(1.05);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Logo centering */
+.logoContainer {
+  margin-top: 4rem;  /* clears the fixed header */
+  text-align: center;
+}
+.logoImage {
+  max-width: 40%;
+  height: auto;
+  display: inline-block;
+}
+
+/* Dashed‐border panel */
+.sectionZone {
+  background: #fff;
+  border: 4px dashed #000;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 3rem auto 2rem;
+  max-width: 800px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Underlined section titles */
+.sectionTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+}
+
+/* 2×2 grid of equal‐sized buttons */
+.downloadGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  justify-items: center;
+}
+.downloadButton {
+  display: inline-block;
+  width: 200px;                  /* fixed width for equal sizing */
+  padding: 1rem 0;               /* vertical padding only */
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #000;
+  background: #fff;
+  border: 3px solid #000;
+  border-radius: 0;              /* no rounding */
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.2s;
+}
+.downloadButton:hover {
+  background: #adf6ec;
+}
+
+/* Center the single PDF button */
+.pdfContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.downloadGrid > div h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.textLink {
+  color: #3ea1d0;        
+  text-decoration: none;
+}
+
+.textLink:hover {
+  color: #2e7b9f;        /* darker on hover */
+}

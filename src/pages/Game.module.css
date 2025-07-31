@@ -1,0 +1,162 @@
+/* src/pages/Game.module.css */
+
+.zone {
+  min-height:      300px;
+  display:         flex;
+  flex-direction:  column;
+  align-items:     center;
+  padding:         10px;
+  background-color: #fafafa;
+  border:          4px dashed #000;   /* default black */
+  /* border-radius:   8px; */
+  box-sizing:      border-box;
+  gap: 12px;
+}
+
+.initialZone,
+.laterZone {
+  width: fit-content;  /* shrink‐to‐fit content */
+  max-width: 100%;     /* never overflow the container */
+}
+
+/* Border-color overrides */
+.passZone       { border-color: #35d0ba; }
+.notPassZone    { border-color: #f84b74; }
+.topBottomZone  { border-color: #ff9234; }
+.policyZone     { border-color: #ffcd3c; }
+
+/* Card image styling */
+.cardImg {
+  width: clamp(140px, 20vw, 250px);
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 12px;
+  transition: transform 0.2s ease;
+}
+
+.zoneTitle {
+  font-size: 1.75rem; 
+  border: 3px solid black;
+  padding: 16px;
+  text-align: center;
+  margin-bottom: 12px;
+  font-weight: bold;
+  /* border-radius: 12px; */
+  background-color: var(--zone-color); /* optional */
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700; /* Bold */
+}
+
+.buttonZoneStyle {
+  border: 3px solid black;
+  padding: 16px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.95rem;
+  background-color: #ffffff; 
+  font-family: 'Josefin Sans', sans-serif;
+  /* border-radius: 12px; */
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.buttonZoneStyle:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;            /* adjust spacing */
+  align-items: start;  
+}
+
+.initialZone.passZone,
+.initialZone.notPassZone {
+  min-width: 300px;
+}
+
+.headerTitle {
+  font-size: 1.75rem;    
+  line-height: 1.2;   
+}
+
+/* layout wrapper for ranking phase */
+.rankPhaseContainer {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* left-hand deck in ranking */
+.rankDeck {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 300px;        
+}
+
+/* the three rank slots, stacked vertically */
+.rankColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.phaseIndicator {
+  position: fixed;    
+  top: 3%;            
+  left: 2%;           
+  font-size: 1.2vw;     /* scales with window width */
+  font-weight: bold;
+  background: rgba(255,255,255,0.8);
+  padding: 0.5em 0.75em;
+  border: 2px solid black;
+  z-index: 1000;      /* above everything */
+}
+
+.rankPhaseContainer .cardsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;          /* space between cards */
+  align-items: stretch;
+}
+
+.rankCircle {
+  display: inline-block;
+  background-color: #ffcb05;
+  border-radius: 50%;
+  padding: 2px 6px;
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+/* make the container relative, so the stamp can sit on top */
+.rankPhaseContainer .rankContainer {
+  position: relative;
+  padding-top: 36px;    /* room for the stamp at the top */
+  cursor: pointer;
+}
+
+/* style the little rank badge */
+.rankPhaseContainer .rankCircle {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px; height: 36px;
+  background:  #f84b74;      /* stamp color */
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.6);
+}
+
+
