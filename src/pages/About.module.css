@@ -149,8 +149,8 @@
 
 /* Link */
 .link {
-  color: #35d0ba;
-  text-decoration: none;
+  color: #3ea1d0;
+  text-decoration: underline;
   font-weight: 700;
 }
 .link:hover {
@@ -177,11 +177,11 @@
   display: flex;
   justify-content: center;  
   align-items: center;      
-  text-align: center;       
+  text-align: center;     
 }
 
 .pageOverlay {
-  position: relative;    
+  position: relative;  
 }
 
 .pageOverlay::before {
@@ -224,3 +224,4 @@ content: "";
   border-top-left-radius: 0px;
   border-bottom-right-radius: 0px;
 }
+

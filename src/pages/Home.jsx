@@ -1,24 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Home.module.css';
-import '../App.css'; 
-
+import '../App.css';
 
 export default function Home() {
   const navigate = useNavigate();
-  const [csvUrl, setCsvUrl] = useState('');
-
-  const decks = [
-    { name: 'Social Robots', url: '/data/rulesForRobots.csv' },
-    { name: 'Gen AI Tutor', url: '/data/genAITutor.csv' },
-    { name: 'AI in K-12', url: '/data/AIPolicy.csv' },
-    // …add more decks
-  ];
 
   return (
     <div className={styles.pageOverlay}>
 
-      {/* Fixed Header */}
+      {/* Fixed Header (unchanged) */}
       <header className={styles.fixedHeader}>
         <button
           className={styles.headerButton}
@@ -40,7 +31,7 @@ export default function Home() {
         </button>
       </header>
 
-      {/* Logo at top */}
+      {/* Logo */}
       <div className={styles.logoContainer}>
         <img
           src="/images/logo.png"
@@ -49,29 +40,9 @@ export default function Home() {
         />
       </div>
 
-      {/* Main Content */}
+      {/* Coming Soon Text */}
       <div className={styles.homeContainer}>
-        <h1 className={styles.title}>Select Your Technology</h1>
-
-        <div className={styles.deckGrid}>
-          {decks.map(d => (
-            <button
-              key={d.url}
-              className={`${styles.deckButton} ${csvUrl === d.url ? styles.active : ''}`}
-              onClick={() => setCsvUrl(d.url)}
-            >
-              {d.name}
-            </button>
-          ))}
-        </div>
-
-        <button
-          className={styles.startButton}
-          disabled={!csvUrl}
-          onClick={() => navigate('/game', { state: { csvUrl } })}
-        >
-          Start Game
-        </button>
+        <h1 className={styles.title}>Coming Soon!</h1>
       </div>
     </div>
   );

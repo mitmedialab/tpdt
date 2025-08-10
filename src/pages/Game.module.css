@@ -116,7 +116,7 @@ body {
   font-weight: bold;
   background: rgba(255,255,255,0.8);
   padding: 0.5em 0.75em;
-  border: 2px solid black;
+  border: 3px dashed #000;
   z-index: 1000;      /* above everything */
 }
 

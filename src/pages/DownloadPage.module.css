@@ -1,4 +1,4 @@
-/* Full-screen gradient background (only on DownloadPage) */
+/* Full-screen gradient background */
 .pageOverlay {
   position: relative;
 }
@@ -92,15 +92,15 @@
 }
 .downloadButton {
   display: inline-block;
-  width: 200px;                  /* fixed width for equal sizing */
-  padding: 1rem 0;               /* vertical padding only */
+  width: 200px;                
+  padding: 1rem 0;              
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 700;
   font-size: 1rem;
   color: #000;
   background: #fff;
   border: 3px solid #000;
-  border-radius: 0;              /* no rounding */
+  border-radius: 0;             
   text-decoration: none;
   text-align: center;
   transition: background 0.2s;
@@ -127,4 +127,21 @@
 
 .textLink:hover {
   color: #2e7b9f;        /* darker on hover */
+}
+
+.placeholderButton {
+  display: inline-block;
+  width: 200px;
+  padding: 1rem 0;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #000;
+  background: #fff;
+  border: 3px solid #000;
+  border-radius: 0;
+  text-decoration: none;
+  text-align: center;
+  cursor: default;
+  pointer-events: none; /* disables clicking */
 }

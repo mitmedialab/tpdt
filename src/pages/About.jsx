@@ -25,7 +25,7 @@ export default function About() {
 
   return (
     <div className={styles.pageOverlay}>
-      <div className={styles.aboutBackground}>
+      <div className={styles.aboutPage}>
 
         {/* Fixed Header */}
 <header className="fixedHeader">
@@ -84,10 +84,28 @@ export default function About() {
           <h2 className={styles.sectionTitle}>About</h2>
           <div className={styles.textBlock}>
             <p>
-              The toolkit was created by Professor Anastasia Ostrowski and PhD Student Daniella DiPaola while both were students in the Personal Robots Group at the MIT Media Lab. They continue to develop this project as part of ongoing research.
-            </p>
+  This project was developed by{" "}
+  <a
+    href="https://www.akostrowski.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ color: "#3ea1d0" }} 
+  >
+    Professor Anastasia Kouvaras Ostrowski (Purdue University)
+  </a>{" "}
+  and{" "}
+  <a
+    href="https://danielladipaola.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ color: "#3ea1d0" }} 
+  >
+    PhD Student Daniella DiPaola (MIT)
+  </a> while both were students in the Personal Robots Group at the MIT Media Lab. They continue to develop this project as part of ongoing research.
+</p>
             <p>
-              We’d like to thank Cynthia Breazeal, Kate Darling, Rylie Spiegel, Zeynep Yalcin, and Zandra Feland for all of their help on this project.
+              We’d like to thank Cynthia Breazeal, Kate Darling, Rylie Spiegel, Zeynep Yalcin, and Zandra Feland for all of their help on this project. This work was generously sponsored by the Harold Horowitz Student Research Fund @ MIT.
+
             </p>
           </div>
         </div>
