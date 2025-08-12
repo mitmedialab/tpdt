@@ -121,20 +121,12 @@
   transform: translateY(-2px);
 }
 
-/* logo spacing if you keep it on Home */
 .logoContainer {
   margin-top: 4rem;
   text-align: center;
-}
-.logoImage {
   max-width: 40%;
   height: auto;
   display: inline-block;
-}
-
-.logoContainer {
-  margin-top: 4rem;      
-  text-align: center;
 }
 
 /* Constrain size */
