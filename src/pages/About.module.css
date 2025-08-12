@@ -3,8 +3,6 @@
 .aboutPage {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem;
-  /* subtle white→clear gradient over your universal bg */
   background: none;
   font-family: 'Josefin Sans', sans-serif;
   color: #333;
