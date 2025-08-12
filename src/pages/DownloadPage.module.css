@@ -52,10 +52,8 @@
 
 /* Logo centering */
 .logoContainer {
-  margin-top: 4rem;  /* clears the fixed header */
+  margin-top: 4rem;
   text-align: center;
-}
-.logoImage {
   max-width: 40%;
   height: auto;
   display: inline-block;

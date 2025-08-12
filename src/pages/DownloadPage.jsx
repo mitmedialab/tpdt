@@ -40,7 +40,7 @@ export default function DownloadPage() {
           <img
   src={logo}
   alt="Technology Policy Design Toolkit"
-  className={styles.logoImage}
+  className="siteLogo"
 />
         </div>
 

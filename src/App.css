@@ -89,6 +89,13 @@ body::before {
   text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.siteLogo {
+  display: block;
+  margin: 4rem auto 3rem;
+  width: clamp(220px, 40vw, 420px); 
+  height: auto;
+}
+
 
 
 

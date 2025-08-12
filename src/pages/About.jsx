@@ -15,13 +15,6 @@ const images = [slide1, slide2, slide3, slide4];
 export default function About() {
   const navigate = useNavigate();
 
-  // carousel images (place in public/images/About/)
-  const images = [
-    '/images/About/slide1.jpg',
-    '/images/About/slide2.jpg',
-    '/images/About/slide3.jpg',
-    '/images/About/slide4.jpg'
-  ];
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
@@ -61,7 +54,7 @@ export default function About() {
           <img
   src={logo}
   alt="Technology Policy Design Toolkit"
-  className={styles.logoImage}
+  className="siteLogo"
 />
         </div>
 

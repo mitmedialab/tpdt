@@ -38,7 +38,7 @@ export default function Home() {
         <img
   src={logo}
   alt="Technology Policy Design Toolkit"
-  className={styles.logoImage}
+  className="siteLogo"
 />
       </div>
 
