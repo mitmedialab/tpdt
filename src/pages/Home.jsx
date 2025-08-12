@@ -34,13 +34,12 @@ export default function Home() {
       </header>
 
       {/* Logo */}
-      <div className={styles.logoContainer}>
         <img
-  src={logo}
-  alt="Technology Policy Design Toolkit"
-  className="siteLogo"
-/>
-      </div>
+          src={logo}
+          alt="Technology Policy Design Toolkit"
+          className="siteLogo"
+        />
+     
 
       {/* Coming Soon Text */}
       <div className={styles.homeContainer}>
