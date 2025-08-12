@@ -225,3 +225,11 @@ content: "";
   border-bottom-right-radius: 0px;
 }
 
+.footerCredit {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #3b3b3b;
+}
+
+

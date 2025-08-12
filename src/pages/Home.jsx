@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import styles from './Home.module.css';
 import '../App.css';
 
+import logo from '../assets/logo.png';
+
 export default function Home() {
   const navigate = useNavigate();
 
@@ -34,10 +36,10 @@ export default function Home() {
       {/* Logo */}
       <div className={styles.logoContainer}>
         <img
-          src="/images/logo.png"
-          alt="Technology Policy Design Toolkit"
-          className={styles.logoImage}
-        />
+  src={logo}
+  alt="Technology Policy Design Toolkit"
+  className={styles.logoImage}
+/>
       </div>
 
       {/* Coming Soon Text */}

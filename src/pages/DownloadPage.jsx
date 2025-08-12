@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import styles from './DownloadPage.module.css';
 import '../App.css';
 
+import logo from '../assets/logo.png';
+
 export default function DownloadPage() {
   const navigate = useNavigate();
 
@@ -36,10 +38,10 @@ export default function DownloadPage() {
         {/* Logo */}
         <div className={styles.logoContainer}>
           <img
-            src="/images/logo.png"
-            alt="Technology Policy Design Toolkit"
-            className={styles.logoImage}
-          />
+  src={logo}
+  alt="Technology Policy Design Toolkit"
+  className={styles.logoImage}
+/>
         </div>
 
         {/* Intro Section with Link */}

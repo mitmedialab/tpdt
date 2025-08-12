@@ -4,6 +4,14 @@ import { useNavigate } from 'react-router-dom';
 import styles from './About.module.css';
 import '../App.css'; 
 
+import slide1 from '../assets/About/slide1.jpg';
+import slide2 from '../assets/About/slide2.jpg';
+import slide3 from '../assets/About/slide3.jpg';
+import slide4 from '../assets/About/slide4.jpg';
+import logo from '../assets/logo.png';
+
+const images = [slide1, slide2, slide3, slide4];
+
 export default function About() {
   const navigate = useNavigate();
 
@@ -51,10 +59,10 @@ export default function About() {
         {/* Logo at top */}
         <div className={styles.logoContainer}>
           <img
-            src="/images/logo.png"
-            alt="Technology Policy Design Toolkit"
-            className={styles.logoImage}
-          />
+  src={logo}
+  alt="Technology Policy Design Toolkit"
+  className={styles.logoImage}
+/>
         </div>
 
         {/* Intro Text as one panel with two paragraphs */}
@@ -70,10 +78,10 @@ export default function About() {
         {/* Image carousel */}
         <div className={styles.gifZone}>
           <img
-            src={images[current]}
-            alt={`Slide ${current + 1}`}
-            className={styles.carouselImage}
-          />
+  src={images[current]}
+  alt={`Slide ${current + 1}`}
+  className={styles.carouselImage}
+/>
           <div className={styles.carouselCredit}>
            Photo credit: [Photographer Name]
          </div>
@@ -130,7 +138,15 @@ export default function About() {
           </div>
         </div>
 
+        {/* Footer Credit */}
+    <div className={styles.footerCredit}>
+      Created by Fouz Morished
+    </div>
+
       </div>
     </div>
+    
   );
 }
+
+
