@@ -133,3 +133,36 @@
   height: auto;
   display: inline-block;
 }
+
+@media (max-width: 768px) {
+  .aboutPage, 
+  .homeContainer, 
+  .sectionZone {
+    max-width: 100%;    /* take full width */
+    padding: 1rem;      /* smaller padding */
+    margin: 0 0 1.5rem; /* less margin */
+  }
+
+  .carouselImage {
+    height: 240px;      /* shrink carousel height */
+    object-fit: cover;
+  }
+
+  .siteLogo {
+    width: 70%;         /* bigger logo on phones */
+    margin: 2rem auto 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .fixedHeader {
+    padding: 0.5rem 1rem;
+    justify-content: center;   /* buttons centered instead of far right */
+  }
+
+  .headerButton {
+    font-size: 1rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
+
