@@ -147,34 +147,40 @@
 }
 
 @media (max-width: 768px) {
+  /* Make all main containers full width with smaller padding */
   .aboutPage, 
   .homeContainer, 
-  .sectionZone {
-    max-width: 100%;    /* take full width */
-    padding: 1rem;      /* smaller padding */
-    margin: 0 0 1.5rem; /* less margin */
+  .sectionZone, 
+  .downloadBackground {
+    max-width: 100%;
+    padding: 1rem;
+    margin: 0 0 1.5rem;
   }
 
+  /* Grid should stack vertically on mobile */
+  .downloadGrid {
+    grid-template-columns: 1fr; /* one column instead of two */
+    gap: 1rem;
+  }
+
+  /* Buttons expand to fit */
+  .downloadButton, 
+  .placeholderButton {
+    width: 100%; /* take full width of parent */
+    max-width: 300px; /* optional limit so not too wide */
+  }
+
+  /* Smaller carousel images (if present) */
   .carouselImage {
-    height: 240px;      /* shrink carousel height */
+    height: 240px;
     object-fit: cover;
   }
 
+  /* Logo scaling */
   .siteLogo {
-    width: 70%;         /* bigger logo on phones */
+    width: 70%;
     margin: 2rem auto 1rem;
   }
 }
 
-@media (max-width: 768px) {
-  .fixedHeader {
-    padding: 0.5rem 1rem;
-    justify-content: center;   /* buttons centered instead of far right */
-  }
-
-  .headerButton {
-    font-size: 1rem;
-    padding: 0.4rem 0.6rem;
-  }
-}
 
