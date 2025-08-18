@@ -7,6 +7,7 @@
   font-family: 'Josefin Sans', sans-serif;
   color: #333;
   position: relative;
+  padding-bottom: 1.5rem;
 }
 
 .logoContainer {
@@ -226,6 +227,7 @@ content: "";
 .footerCredit {
   text-align: center;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   font-size: 1rem;
   color: #3b3b3b;
 }

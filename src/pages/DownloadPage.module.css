@@ -5,24 +5,21 @@
 .pageOverlay::before {
   content: "";
   position: fixed;
-  top:    0;
-  right:  0;
-  bottom: 0;
-  left:   0;
+  top: 0; right: 0; bottom: 0; left: 0;
   background: linear-gradient(
     to bottom,
     rgba(255,255,255,0.95) 0%,
-    rgba(255,255,255,0)     90%
+    rgba(255,255,255,0) 90%
   );
   pointer-events: none;
-  z-index:        -1;
+  z-index: -1;
 }
 .pageOverlay > * {
   position: relative;
   z-index: 1;
 }
 
-/* Unified fixed header */
+/* Unified fixed header (global classes used in JSX) */
 .fixedHeader {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -42,7 +39,7 @@
   font-weight: 700;
   color: #333;
   cursor: pointer;
-  transition: color 0.2s ease, transform 0.2s ease, text-shadow 0.2s ease;
+  transition: color 0.2s, transform 0.2s, text-shadow 0.2s;
 }
 .headerButton:hover {
   color: #35d0ba;
@@ -50,10 +47,10 @@
   text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Logo centering */
+/* Logo centering (container only, spacing handled by siteLogo) */
 .logoContainer {
-  margin-top: 4rem;      
-  margin-bottom: 3rem;      
+  margin-top: 4rem;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
@@ -68,7 +65,7 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* Underlined section titles */
+/* Section titles */
 .sectionTitle {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
@@ -79,33 +76,44 @@
   position: absolute;
 }
 
-/* 2×2 grid of equal‐sized buttons */
+/* Grid container */
 .downloadGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  justify-items: center;
+  grid-template-columns: repeat(2, 1fr); /* always 2 columns */
+  gap: 1.5rem;
+  justify-items: center; /* center each box */
 }
-.downloadButton {
-  display: inline-block;
-  width: 200px;                
-  padding: 1rem 0;              
+
+/* Each topic box has same fixed width */
+.downloadGrid > div {
+  width: 220px;          /* ✅ consistent width for every box */
+  text-align: center;
+}
+
+/* Unified buttons */
+.downloadButton,
+.placeholderButton {
+  display: block;
+  width: 100%;           /* match parent div (220px) */
+  padding: 1rem 0;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 700;
   font-size: 1rem;
   color: #000;
   background: #fff;
   border: 3px solid #000;
-  border-radius: 0;             
+  border-radius: 0;
   text-decoration: none;
   text-align: center;
   transition: background 0.2s;
 }
+
 .downloadButton:hover {
   background: #adf6ec;
 }
 
-/* Center the single PDF button */
+
+/* Center the single PDF button (if used) */
 .pdfContainer {
   display: flex;
   justify-content: center;
@@ -117,70 +125,53 @@
 }
 
 .textLink {
-  color: #3ea1d0;        
+  color: #3ea1d0;
   text-decoration: none;
 }
-
 .textLink:hover {
-  color: #2e7b9f;        /* darker on hover */
+  color: #2e7b9f;
 }
 
-.placeholderButton {
-  display: inline-block;
-  width: 200px;
-  padding: 1rem 0;
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  color: #000;
-  background: #fff;
-  border: 3px solid #000;
-  border-radius: 0;
-  text-decoration: none;
-  text-align: center;
-  cursor: default;
-  pointer-events: none; /* disables clicking */
-}
-
+/* Bottom buffer so the page can breathe */
 .downloadBackground {
-  padding-bottom: 4rem; /* ← buffer space at the end */
+  padding-bottom: 4rem;
 }
 
+/* ===== Mobile tweaks ===== */
 @media (max-width: 768px) {
-  /* Make all main containers full width with smaller padding */
-  .aboutPage, 
-  .homeContainer, 
-  .sectionZone, 
+  /* Make main containers fit smaller screens */
+  .sectionZone,
   .downloadBackground {
     max-width: 100%;
     padding: 1rem;
     margin: 0 0 1.5rem;
   }
 
-  /* Grid should stack vertically on mobile */
+  /* Keep the grid on phones; spacing slightly tighter */
   .downloadGrid {
-    grid-template-columns: 1fr; /* one column instead of two */
-    gap: 1rem;
+    gap: 0.75rem;
   }
 
-  /* Buttons expand to fit */
-  .downloadButton, 
+  /* Slightly looser button layout on small screens */
+  .downloadButton,
   .placeholderButton {
-    width: 100%; /* take full width of parent */
-    max-width: 300px; /* optional limit so not too wide */
+    max-width: 220px;  /* give a touch more room on mobile */
+    padding: 0.9rem 0;
   }
 
-  /* Smaller carousel images (if present) */
-  .carouselImage {
-    height: 240px;
-    object-fit: cover;
+  /* Header compaction */
+  .fixedHeader {
+    padding: 0.5rem 1rem;
+    justify-content: center;
+  }
+  .headerButton {
+    font-size: 1rem;
+    padding: 0.4rem 0.6rem;
   }
 
-  /* Logo scaling */
+  /* Logo scaling (global .siteLogo class is in App.css) */
   .siteLogo {
     width: 70%;
     margin: 2rem auto 1rem;
   }
 }
-
-
