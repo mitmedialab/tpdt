@@ -237,7 +237,7 @@ content: "";
   .homeContainer, 
   .sectionZone {
     max-width: 100%;    /* take full width */
-    padding: 1rem;      /* smaller padding */
+    padding: 0.5rem;      /* smaller padding */
     margin: 0 0 1.5rem; /* less margin */
   }
 

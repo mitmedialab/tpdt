@@ -76,7 +76,7 @@ export default function About() {
   className={styles.carouselImage}
 />
           <div className={styles.carouselCredit}>
-           Photo credit: [Photographer Name]
+           Photos credit: Blue Pearl Photography
          </div>
         </div>
 
