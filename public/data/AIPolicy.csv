@@ -1,25 +1,25 @@
-text,icon,round
-"The educator leads classroom activities, and the AI system supports those activities",ai_vs_educator.png,1
-"Sometimes the educator leads classroom activities and AI supports, and sometimes AI leads the classroom activities and the educator supports",ai_vs_educator.png,1
-"The AI leads classroom activities and the teacher supports those activities",ai_vs_educator.png,1
-"Every AI system that is introduced to the classroom should be evaluated beforehand for student learning outcomes",evaluation.png,2
-"AI systems should be evaluated for student learning outcomes only if a community member requests one",evaluation.png,2
-"AI systems do not have to be evaluated for student learning outcomes",evaluation.png,2
-"All students have at least 10 hours of AI literacy each year",ai_literacy.png,3
-"Students can take AI literacy through an elective",ai_literacy.png,3
-"There is no requirement for AI literacy",ai_literacy.png,3
-"A third-party audit needs to be done to make sure that the data that the AI system uses is representative of the students that will be using it",bias_in_training_data.png,4
-"A third-party audit needs to be done only if the AI system is suspected to be biased",bias_in_training_data.png,4
-"The dataset need not be audited by a third party",bias_in_training_data.png,4
-"There are no limits to what the AI system can collect",data_privacy.png,5
-"School districts should decide on what data is collected, and parents have to approve",data_privacy.png,5
-"The AI system does not collect or save data",data_privacy.png,5
-"It is OK for students to use AI to complete any assignment",academic_integrity.png,6
-"It is OK for students to use AI to complete an assignment if the teacher has given permission",academic_integrity.png,6
-"It is never OK for students to use AI to complete an assignment",academic_integrity.png,6
-"There are no limits to what the AI system can help the district with or how",techno_solutionism.png,7
-"There should be guidelines for what and how the AI system should be helping the district with",techno_solutionism.png,7
-"There should be restrictions on what the AI system should be assisting the district with",techno_solutionism.png,7
-"All districts should get an equal amount of funding for AI tools",procurement.png,8
-"Districts should have to apply for funding if they are interested in AI tools",procurement.png,8
-"Title I schools are given priority for funding for AI tools",procurement.png,8
+name,text,icon,round
+edu_more,"The educator leads classroom activities, and the AI system supports those activities",ai_vs_educator.png,1
+edu_med,"Sometimes the educator leads classroom activities and AI supports, and sometimes AI leads the classroom activities and the educator supports",ai_vs_educator.png,1
+edu_less,"The AI leads classroom activities and the teacher supports those activities",ai_vs_educator.png,1
+eval_more,"Every AI system that is introduced to the classroom should be evaluated beforehand for student learning outcomes",evaluation.png,2
+eval_med,"AI systems should be evaluated for student learning outcomes only if a community member requests one",evaluation.png,2
+eval_less,"AI systems do not have to be evaluated for student learning outcomes",evaluation.png,2
+ailit_more,"All students have at least 10 hours of AI literacy each year",ai_literacy.png,3
+ailit_med,"Students can take AI literacy through an elective",ai_literacy.png,3
+ailit_less,"There is no requirement for AI literacy",ai_literacy.png,3
+bias_more,"A third-party audit needs to be done to make sure that the data that the AI system uses is representative of the students that will be using it",bias_in_training_data.png,4
+bias_med,"A third-party audit needs to be done only if the AI system is suspected to be biased",bias_in_training_data.png,4
+bias_less,"The dataset need not be audited by a third party",bias_in_training_data.png,4
+privacy_less,"There are no limits to what the AI system can collect",data_privacy.png,5
+privacy_med,"School districts should decide on what data is collected, and parents have to approve",data_privacy.png,5
+privacy_more,"The AI system does not collect or save data",data_privacy.png,5
+integ_less,"It is OK for students to use AI to complete any assignment",academic_integrity.png,6
+integ_med,"It is OK for students to use AI to complete an assignment if the teacher has given permission",academic_integrity.png,6
+integ_more,"It is never OK for students to use AI to complete an assignment",academic_integrity.png,6
+techno_less,"There are no limits to what the AI system can help the district with or how",techno_solutionism.png,7
+techno_med,"There should be guidelines for what and how the AI system should be helping the district with",techno_solutionism.png,7
+techno_more,"There should be restrictions on what the AI system should be assisting the district with",techno_solutionism.png,7
+funding_less,"All districts should get an equal amount of funding for AI tools",procurement.png,8
+funding_med,"Districts should have to apply for funding if they are interested in AI tools",procurement.png,8
+funding_more,"Title I schools are given priority for funding for AI tools",procurement.png,8

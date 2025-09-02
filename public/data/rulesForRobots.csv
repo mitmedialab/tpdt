@@ -1,28 +1,28 @@
-text,icon,round
-"The user controls all settings",autonomy.png,1
-"The company controls some settings, but the user can change some settings",autonomy.png,1
-"Company controls all settings",autonomy.png,1
-"Robots should not be allowed to be humanoid OR animal like",uncanny_valley.png,2
-"Robots should not be allowed to be humanoid (look like a human) ",uncanny_valley.png,2
-"Robots can take on whatever form technologists would like",uncanny_valley.png,2
-"Robots cannot show emotions",emotional_deception.png,3
-"Robots show emotions AND needs to let the user know what emotion it is expressing",emotional_deception.png,3
-"Robots show emotions",emotional_deception.png,3
-"A team designing a robot to recommend ice cream needs to use a dataset with ice cream flavors from every country in the world",bias_in_training_data.png,4
-"A team designing a robot to recommend ice cream needs to use a dataset with only ice cream flavors from the US",bias_in_training_data.png,4
-"There should be no rules on what dataset a team can use to design a robot to recommend ice cream",bias_in_training_data.png,4
-"A team designing a robot function to teach yoga needs to have a yoga teacher",social_bias_in_design.png,5
-"A team designing a robot function to teach yoga needs to have a yoga teacher or talk to a yoga teacher",social_bias_in_design.png,5
-"A team designing a robot function to teach yoga does not need to have a yoga teacher",social_bias_in_design.png,5
-"Robots remember nothing",data_privacy.png,6
-"Robots should only remember things that I tell it to remember",data_privacy.png,6
-"Robots should remember everything ever said",data_privacy.png,6
-"Robots cannot advertise things to users",social_persuasion.png,7
-"The company can advertise things to the user through their robot if it thinks the user would like them",social_persuasion.png,7
-"Robots can advertise things to users if it thinks the user would like them",social_persuasion.png,7
-"There should be restrictions on the application areas of robots",techno_solutionism.png,8
-"There should be guidelines for the application areas of robots",techno_solutionism.png,8
-"There are no limits to the application areas of robots",techno_solutionism.png,8
-"The robot lets the user know where it got its information from",transparency.png,9
-"The robot only lets the user know where it got its information from when the user asks",transparency.png,9
-"The robot doesn’t let the user know where it got its information from",transparency.png,9
+name,text,icon,round
+auto_more,"The user controls all settings",autonomy.png,1
+auto_med,"The company controls some settings, but the user can change some settings",autonomy.png,1
+auto_less,"Company controls all settings",autonomy.png,1
+uv_more,"Robots should not be allowed to be humanoid OR animal like",uncanny_valley.png,2
+uv_med,"Robots should not be allowed to be humanoid (look like a human) ",uncanny_valley.png,2
+uv_less,"Robots can take on whatever form technologists would like",uncanny_valley.png,2
+ed_more,"Robots cannot show emotions",emotional_deception.png,3
+ed_med,"Robots show emotions AND needs to let the user know what emotion it is expressing",emotional_deception.png,3
+ed_less,"Robots show emotions",emotional_deception.png,3
+db_more,"A team designing a robot to recommend ice cream needs to use a dataset with ice cream flavors from every country in the world",bias_in_training_data.png,4
+db_med,"A team designing a robot to recommend ice cream needs to use a dataset with only ice cream flavors from the US",bias_in_training_data.png,4
+db_less,"There should be no rules on what dataset a team can use to design a robot to recommend ice cream",bias_in_training_data.png,4
+socialbias_more,"A team designing a robot function to teach yoga needs to have a yoga teacher",social_bias_in_design.png,5
+socialbias_med,"A team designing a robot function to teach yoga needs to have a yoga teacher or talk to a yoga teacher",social_bias_in_design.png,5
+socialbias_less,"A team designing a robot function to teach yoga does not need to have a yoga teacher",social_bias_in_design.png,5
+privacy_more,"Robots remember nothing",data_privacy.png,6
+privacy_med,"Robots should only remember things that I tell it to remember",data_privacy.png,6
+privacy_less,"Robots should remember everything ever said",data_privacy.png,6
+sp_more,"Robots cannot advertise things to users",social_persuasion.png,7
+sp_med,"The company can advertise things to the user through their robot if it thinks the user would like them",social_persuasion.png,7
+sp_less,"Robots can advertise things to users if it thinks the user would like them",social_persuasion.png,7
+techno_more,"There should be restrictions on the application areas of robots",techno_solutionism.png,8
+techno_med,"There should be guidelines for the application areas of robots",techno_solutionism.png,8
+techno_less,"There are no limits to the application areas of robots",techno_solutionism.png,8
+trans_more,"The robot lets the user know where it got its information from",transparency.png,9
+trans_med,"The robot only lets the user know where it got its information from when the user asks",transparency.png,9
+trans_less,"The robot doesn’t let the user know where it got its information from",transparency.png,9
